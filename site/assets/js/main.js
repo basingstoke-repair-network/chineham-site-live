@@ -88,7 +88,7 @@ function countdownTo() {
     const monthLong = nextEvt.toLocaleString(undefined, { month: "long" });
 
     document.querySelectorAll(".nextEventDate").forEach((e, _i) => {
-      if (nextEvt.getMonth() == 11 && now.getHours() >= 13) {
+      if (false && nextEvt.getMonth() == 11 && now.getHours() >= 13) {
         e.innerHTML = "We have finished our sessions for 2024. please check back next year (2025)."
         return;
       }
