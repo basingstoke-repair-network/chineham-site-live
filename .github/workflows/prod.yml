@@ -18,13 +18,13 @@ env:
   USER_TOKEN: ${{ secrets.PROD_TOKEN }}
   USER_NAME: "Chineham Repair Cafe Site (GitHub Actions)"
   USER_EMAIL: "chineham-repair-cafe@users.noreply.github.com"
-  OWNER: chineham-repair-cafe
+  OWNER: basingstoke-repair-network
   REPOSITORY_NAME: chineham-site-live
 
 jobs:
   apply-staging-to-live:
     name: "STAFF ONLY: Apply changes to `live` branch."
-    if: ${{ inputs.copy_to_live && contains(github.ref, 'staging') && github.repository == 'chineham-repair-cafe/chineham-site-staging' }}
+    if: ${{ inputs.copy_to_live && contains(github.ref, 'staging') && github.repository == 'basingstoke-repair-network/chineham-site-staging' }}
     runs-on: ubuntu-latest
     steps:
       - name: Setup Git user.
